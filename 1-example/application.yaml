@@ -1,0 +1,16 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: my-app
+  namespace: argocd
+  # finalizers:
+  #   - resources-finalizer.argocd.argoproj.io
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ye-wint-7/lesson-158.git
+    targetRevision: HEAD
+    path: myapp
+  destination:
+    server: https://kubernetes.default.svc
