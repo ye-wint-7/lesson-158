@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: falconone2025/nginx:v0.1.1
+          image: falconone2025/nginx:v0.1.2
           ports:
             - containerPort: 80
